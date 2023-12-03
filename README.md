@@ -1,6 +1,6 @@
 ## Yolo Group Country Lookup
 
-![intro-image](./public/yolo-country-lookup.png)
+<img src="./public/yolo-country-lookup.png" alt="app-intro-image" width="300"/>
 
 ### Description
 
@@ -8,7 +8,7 @@ SPA web resource for looking up countries by their country code
 
 ### Live instance
 
-Working version can be found at [here](https://google.ee)
+Working version can be found at [https://yoloapp.simlabs.dev](https://yoloapp.simlabs.dev)
 
 ### Development
 
