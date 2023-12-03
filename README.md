@@ -59,6 +59,10 @@ To run tests:
 npm run test
 ```
 
+### Sources
+
+This app uses a public GraphQL endpoint https://countries.trevorblades.com/
+
 ### License
 
 MIT License
