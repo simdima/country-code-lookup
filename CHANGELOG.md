@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.3 - 2023-12-03
+
+### Fixed
+
+- Fix Dockerfile
+
 ## 1.0.2 - 2023-12-03
 
 ### Added
