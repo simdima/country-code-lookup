@@ -10,7 +10,7 @@ describe('Search component', () => {
       />
     );
 
-    expect(screen.getByPlaceholderText('Search country code...')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('Search for a country or its code...')).toBeInTheDocument();
     expect(screen.getByRole('textbox')).toHaveValue('');
   });
 
@@ -28,6 +28,6 @@ describe('Search component', () => {
     expect(inputElement).toHaveAttribute('placeholder', '');
 
     fireEvent.blur(inputElement);
-    expect(inputElement).toHaveAttribute('placeholder', 'Search country code...');
+    expect(inputElement).toHaveAttribute('placeholder', 'Search for a country or its code...');
   });
 });

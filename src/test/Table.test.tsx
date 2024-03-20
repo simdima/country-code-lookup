@@ -26,7 +26,7 @@ describe('Table component', () => {
       <MockedProvider
         mocks={apolloMocks}
         addTypename={false}>
-        <Table filter="" />
+        <Table searchTerm="" />
       </MockedProvider>
     );
 
@@ -37,12 +37,28 @@ describe('Table component', () => {
     });
   });
 
-  it('filters the countries based on the provided filter', async () => {
+  it('filters the countries based on country code', async () => {
     render(
       <MockedProvider
         mocks={apolloMocks}
         addTypename={false}>
-        <Table filter="EE" />
+        <Table searchTerm="EE" />
+      </MockedProvider>
+    );
+
+    await waitFor(() => {
+      expect(screen.getByText('Estonia')).toBeInTheDocument();
+      expect(screen.queryByText('United States')).toBeNull();
+      expect(screen.queryByText('Spain')).toBeNull();
+    });
+  });
+
+  it('filters the countries based on country name', async () => {
+    render(
+      <MockedProvider
+        mocks={apolloMocks}
+        addTypename={false}>
+        <Table searchTerm="Estonia" />
       </MockedProvider>
     );
 
