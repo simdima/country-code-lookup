@@ -63,6 +63,10 @@ npm run test
 
 This app uses a public GraphQL endpoint https://countries.trevorblades.com/
 
+### Notes
+
+App was originally a test assignment for a job position
+
 ### License
 
 MIT License
