@@ -7,9 +7,7 @@ type SearchProps = {
 };
 
 const Search = ({ term, handleTermChange }: SearchProps) => {
-  const [placeholder, setPlaceholder] = useState<'Search country code...' | ''>(
-    'Search country code...'
-  );
+  const [placeholder, setPlaceholder] = useState('Search for a country or its code...');
 
   return (
     <form
@@ -21,11 +19,11 @@ const Search = ({ term, handleTermChange }: SearchProps) => {
         }`}
         type="text"
         aria-label="Search country code..."
+        value={term}
+        onChange={({ target }) => handleTermChange(target.value)}
         placeholder={placeholder}
         onFocus={() => setPlaceholder('')}
-        onBlur={() => setPlaceholder('Search country code...')}
-        value={term.toUpperCase()}
-        onChange={({ target }) => handleTermChange(target.value)}
+        onBlur={() => setPlaceholder('Search for a country or its code...')}
       />
     </form>
   );

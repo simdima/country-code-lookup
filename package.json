@@ -1,7 +1,7 @@
 {
-  "name": "yolo-country-lookup",
+  "name": "country-code-lookup",
   "private": true,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "scripts": {
     "dev": "vite --host",

@@ -6,4 +6,4 @@ export type QueryResponseType = {
   countries: { code: string; name: string; emoji: string }[];
 };
 
-export const STORAGE_KEY = 'yolo-app-theme' as const;
+export const STORAGE_KEY = 'ccl-app-theme' as const;

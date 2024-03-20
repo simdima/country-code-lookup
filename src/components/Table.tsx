@@ -3,10 +3,10 @@ import { COUNTRIES_QUERY } from '../api/queries';
 import { QueryResponseType } from '../@types';
 
 type TableProps = {
-  filter: string;
+  searchTerm: string;
 };
 
-const Table = ({ filter }: TableProps) => {
+const Table = ({ searchTerm }: TableProps) => {
   const { data, error, loading } = useQuery<QueryResponseType>(COUNTRIES_QUERY);
 
   if (loading) {
@@ -38,11 +38,13 @@ const Table = ({ filter }: TableProps) => {
     );
   }
 
+  const checkAgainstSearchTerm = (x: string) =>
+    x.toLowerCase().indexOf(searchTerm.trim().toLowerCase()) > -1;
   const filteredCountries =
     typeof data === 'undefined'
       ? []
-      : data.countries.filter(
-          ({ code }) => code.toLowerCase().indexOf(filter.trim().toLowerCase()) > -1
+      : data.countries.filter(({ code, name }) =>
+          searchTerm.length === 2 ? checkAgainstSearchTerm(code) : checkAgainstSearchTerm(name)
         );
 
   return (

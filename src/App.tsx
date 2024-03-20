@@ -14,9 +14,9 @@ import useTheme from './hooks/useTheme';
 import './App.css';
 
 function App() {
-  const { theme, setTheme } = useTheme();
   const [term, setTerm] = useState('');
 
+  const { theme, setTheme } = useTheme();
   const handleChangeTheme = useCallback(() => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
   }, [theme, setTheme]);
@@ -33,7 +33,7 @@ function App() {
             term={term}
             handleTermChange={setTerm}
           />
-          <Table filter={term} />
+          <Table searchTerm={term} />
         </main>
       </ApolloProvider>
       <Footer />

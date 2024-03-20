@@ -1,4 +1,10 @@
-# Changelog
+# What's Changed
+
+## 1.0.4 - 2024-03-20
+
+### Fixed
+
+- Minor refactor to turn the webapp from test assignment to standalone app
 
 ## 1.0.3 - 2023-12-03
 
